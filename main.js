@@ -16,12 +16,23 @@ async function findMovie() {
             .get(`${BASE_URL}${randomNumber}?api_key=${API_KEY}&language=pt-BR`)
             .then((response) => response.data);
 
+        let descriptionMovie = movie.overview
+            ? movie.overview
+            : "Sinopse faltando.";
+        let posterURL = movie.poster_path
+            ? `${IMG_URL}/${movie.poster_path}`
+            : "assets/missing-image.svg";
+
         containerMovies.innerHTML = `
-            <img class='poster-movie' src='${IMG_URL}/${movie.poster_path}' alt=${movie.title} Poster />
+            <img class='poster-movie' src=${posterURL} alt=${movie.title} Poster />
             <h2 class='title-movie'>${movie.title}</h2>
-            <p>${movie.overview}</p>
+            <p>${descriptionMovie}</p>
         `;
+        console.log(movie.poster_path);
     } catch (e) {
-        console.log(e.message);
+        containerMovies.innerHTML = `
+            <img class='missing-poster-movie' src='assets/missing-image.svg' alt='Not found Image'>
+            <h2 class='title-movie'>Ops, nenhum filme encontrado :( <br>Tente de novo!</h2>
+        `;
     }
 }

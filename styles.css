@@ -103,17 +103,21 @@ body {
     margin: 0 auto;
 
     grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-        "poster title"
-        "poster overview";
+    grid-template-rows: max-content 1fr;
     gap: 1.9rem 3.4rem;
 
     text-align: left;
 }
 
-.poster-movie {
+.poster-movie,
+.missing-poster-movie {
     max-width: 100%;
-    grid-area: poster;
+    grid-row: 1 / 4;
+}
+
+.missing-poster-movie {
+    object-fit: cover;
+    object-position: 0 3rem;
 }
 
 .title-movie {

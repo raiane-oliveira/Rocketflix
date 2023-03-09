@@ -9,4 +9,17 @@
     --subtitle: #b3b3b3;
     --bg-button: #e9e6e3;
     --background: linear-gradient(43deg, #102d71 0%, #000 52%, #c12a23 100%);
+    font-size: 62.5%; /* Faz 1rem valer 10px */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* App */
+#app {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    margin: 12.6rem auto;
 }

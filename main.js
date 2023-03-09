@@ -13,7 +13,7 @@ async function findMovie() {
 
     try {
         const movie = await axios
-            .get(`${BASE_URL}${randomNumber}?api_key=${API_KEY}&language=pt-BR`)
+            .get(`${BASE_URL}${randomNumber}?api_key=${API_KEY}&${language}`)
             .then((response) => response.data);
 
         let descriptionMovie = movie.overview

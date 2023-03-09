@@ -59,6 +59,7 @@ body {
     margin: 3rem auto 2.6rem auto;
     padding: 1.2rem 1.6rem;
     border-radius: 0.5rem;
+    background-color: var(--bg-button);
     cursor: pointer;
 
     font-size: 1.4rem;
@@ -78,4 +79,14 @@ body {
     width: 3.5rem;
     height: 2.5rem;
     background: url(assets/shuffle.svg) no-repeat center / 3.5rem 2.5rem;
+}
+
+/* Paragraph app */
+.paragraph-app {
+    max-width: 38.1rem;
+    margin: 0 auto;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.1rem;
 }

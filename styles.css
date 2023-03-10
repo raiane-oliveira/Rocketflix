@@ -115,6 +115,7 @@ body {
     grid-row: 1 / 4;
 }
 
+.poster-movie[src="assets/missing-image.svg"],
 .missing-poster-movie {
     object-fit: cover;
     object-position: 0 3rem;

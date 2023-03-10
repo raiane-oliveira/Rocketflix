@@ -24,12 +24,11 @@ async function findMovie() {
             : "assets/missing-image.svg";
 
         containerMovies.innerHTML = `
-            <img class='poster-movie' src=${posterURL} alt=${movie.title} Poster />
+            <img class='poster-movie' src=${posterURL} alt=${movie.title} />
             <h2 class='title-movie'>${movie.title}</h2>
             <p>${descriptionMovie}</p>
         `;
-        console.log(movie.poster_path);
-    } catch (e) {
+    } catch (error) {
         containerMovies.innerHTML = `
             <img class='missing-poster-movie' src='assets/missing-image.svg' alt='Not found Image'>
             <h2 class='title-movie'>Ops, nenhum filme encontrado :( <br>Tente de novo!</h2>
